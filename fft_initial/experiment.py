@@ -20,5 +20,4 @@ def coefficientMultiply(a, b):
             
     return outputCoeff
 
-result = coefficientMultiply(a,b)
-print(result)
+print(coefficientMultiply(a,b))
