@@ -5,3 +5,5 @@ I decided to try less robust documentation (compared to my previous maths engine
 
 - Researched how fft works
 - Updated plan.md with initial aims/scope
+- Coded coeff and point mults. 
+- Found out python handles imaginary numbers correctly (using j)
