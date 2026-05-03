@@ -6,7 +6,9 @@ import math
 # Private functions (prefixed with _): _fftCall, _omega, _po2, _zeroPad
 
 
-def fft(a, n):
+def fft(a, n = None):
+    if not n:
+        n = len(a)
     N = _po2(n)
     return _fftCall(_zeroPad(a, N), _omega(N), N)
 
@@ -45,7 +47,6 @@ def _po2(x):
     while num < x:
         num *= 2
     return num
-
 
 def _zeroPad(a, n):
     return a + [0] * (n - len(a))
