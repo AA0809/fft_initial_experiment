@@ -1,6 +1,10 @@
 import fourier
+import math
+bufferSize = 4096
+sampleRate = 44100
+freq = 440
+buffer = [math.sin(2 * math.pi * freq * i / sampleRate) for i in range(bufferSize)]
 
-buffer = [1,0,-1,0]
 
 def getFreqs(buffer, sampleFreq = None, sorted = True):
     if not sampleFreq:
@@ -17,8 +21,11 @@ def getFreqs(buffer, sampleFreq = None, sorted = True):
         freqs.sort(reverse= True, key= lambda x: x[1])
     return freqs
 
-def prettyPrint(freqs):
-    for x in freqs:
+def prettyPrint(freqs,n = None):
+    if not n or n > len(freqs):
+        n = len(freqs)
+    for x in freqs[:n]:
         print(str(x[0]) + "Hz: " + str(x[1]))
 
-prettyPrint(getFreqs(buffer))
+# prettyprint the first n strongest frequencies
+prettyPrint(getFreqs(buffer, sampleRate), 10)
