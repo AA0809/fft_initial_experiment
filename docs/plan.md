@@ -1,6 +1,6 @@
 # Plan
 
-## Aims
+## Aims 2/5/26
 I plan to use fft for my a-level cs project as its a complex project that appeals to me because of the applications with music and pitch-detection. 
 
 This project specifically is called initial because it is my initial experimenting with fft, something rough to go alongside my reading of how it works.
@@ -14,3 +14,13 @@ Also I will probably not use oop for now as this is just experimentation. I will
 ## Future plans
 - I will possibly compare these two methods if I do a full test and can figure out how to collect information on run length
 - I may from here, try and figure out pitch detection on my own. I already have an idea (by maintaining coefficients but switching to sinx, sin2x, etc. essentially stacking frequencies instead, i should be able to do the same thing with evaluation to convert to a sampled wave, and vice versa)
+
+
+## Updated Plan 3/5/26
+Done:
+- coded fft and inverse fft
+- verified this works in the context of polynomial multiplication
+TODO:
+- Convert the functions to a class with OOP so I can separate my different experiments by files 
+- Code fourier frequency analysis
+- Read up and fully understand frequency analysis
